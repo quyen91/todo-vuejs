@@ -1,0 +1,7 @@
+{
+  "name": "todo-vuejs",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^3.3.0"
+  }
+}
