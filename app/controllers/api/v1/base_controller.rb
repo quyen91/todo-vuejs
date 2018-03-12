@@ -1,14 +1,2 @@
-class BaseController < ActionController::API
-  def index
-    render json: Todo.all
-  end
-
-  def create
-  end
-
-  def update
-  end
-
-  def detroy
-  end
+class Api::V1::BaseController < ActionController::API
 end
