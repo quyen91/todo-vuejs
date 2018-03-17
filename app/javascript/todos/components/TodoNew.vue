@@ -11,10 +11,10 @@
 </template>
 
 <script>
-  import axios from 'axios'
 
   export default {
     name: 'todo-new',
+
     data(){
       return {
         new_todo: {}
@@ -23,17 +23,8 @@
 
     methods: {
       addTodo(){
-        axios.post('api/v1/todos', {
-            todo: this.new_todo
-          })
-          .then(response => {
-            this.$emit('add-new-todo', response.data);
-            console.log('success')
-          })
-          .catch(error => {
-            console.error(error);
-          });
-        console.log(this.new_todo)
+        this.$store.dispatch('add_todo', this.new_todo)
+        this.new_todo = {}
       }
     }
   }
