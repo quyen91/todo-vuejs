@@ -1,7 +1,7 @@
 <template>
   <div class='todo-list'>
     <ul>
-      <li v-for="todo in todoList" :key="todo.id">
+      <li v-for="todo in this.$store.state.todoLists" :key="todo.id">
          <todo-item :todo-item="todo" />
       </li>
     </ul>
@@ -9,15 +9,12 @@
 </template>
 
 <script>
-  import axios from 'axios'
   import TodoItem from '../components/TodoItem'
 
   export default {
     components: {
       TodoItem
     },
-
-    props: ["todoList"]
   }
 </script>
 
