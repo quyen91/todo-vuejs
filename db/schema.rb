@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180310151404) do
+ActiveRecord::Schema.define(version: 20180324035415) do
 
   create_table "todos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20180310151404) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_todos_on_name"
+  end
+
+  create_table "tutorials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.text "links"
+    t.integer "status", default: 0
+    t.integer "level", default: 0
+    t.datetime "last_viewed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

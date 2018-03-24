@@ -9,6 +9,7 @@ gem 'rails', '~> 5.1.4'
 gem 'mysql2'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
+gem 'acts-as-taggable-on', '~> 4.0'
 
 gem 'slim'
 gem 'uglifier', '>= 1.3.0'
